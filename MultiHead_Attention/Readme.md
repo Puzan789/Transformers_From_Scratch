@@ -1,24 +1,4 @@
-# Steps of Multi-Head Attention
-
-## Linear Projections
-- The input sequence, represented as a matrix \( X \), is linearly projected into three matrices for each head: Query (Q), Key (K), and Value (V).
-- For a model with total dimensionality \( d_{model} \) and \( h \) heads, each head operates on vectors of dimension \( d_k = d_v = \frac{d_{model}}{h} \).
-- These projections are obtained using learned weight matrices \( W_Q \), \( W_K \), \( W_V \).
-
-## Attention Calculation for Each Head
-- For each head \( i \), the attention scores are calculated using the formula:
-  \[
-  \text{Attention}(Q_i, K_i, V_i) = \text{softmax} \left( \frac{Q_i K_i^T}{\sqrt{d_k}} \right) V_i
-  \]
-  The softmax function normalizes these scores into probabilities, which determine the weighting of the Value vectors.
-
-## Combining Heads
-- The outputs from all heads are concatenated and linearly transformed to produce the final output:
-  \[
-  \text{Output} = \text{Concat}(H_1, H_2, \ldots, H_h) W_O
-  \]
-  Here, \( W_O \) is a learned weight matrix that combines the outputs from the different heads.
-
+Sure, let's go through a step-by-step example of how a sentence is processed in a transformer model using multi-head attention. We'll include tokenization, embedding, positional encoding, and the application of multi-head attention, along with an example output.
 
 ### Example Sentence Processing with Multi-Head Attention
 
@@ -99,3 +79,10 @@ Suppose the final transformed output for each token is:
 - "telescope": [0.8, 0.7, 0.6, 0.9, 0.8, 0.7]
 
 These vectors represent the final encoded state of each token in the sentence after applying multi-head attention and are used for subsequent layers in the transformer model, such as the feed-forward layers, or for making predictions.
+
+### Conclusion
+The multi-head attention mechanism allows the model to focus on different aspects of the input sentence simultaneously, such as syntax, semantics, and context. This leads to a richer and more nuanced understanding of the data, which is crucial for tasks like translation, summarization, and more.
+
+---
+
+This example provides a concrete walkthrough of how a sentence is processed using multi-head attention in a transformer model, illustrating the process from tokenization to final output representation.

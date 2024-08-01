@@ -17,8 +17,7 @@ Self-attention is a key mechanism in transformer neural networks, enabling the m
 
 5. **Weighted Sum of Values**: The final output for each token is a weighted sum of the Value vectors, weighted by the attention weights.
 
-Query (Q): The question asked by the teacher. It seeks specific information or attention from the students.
-Key (K): The information that each student provides in response to the question. It represents how much a student's response aligns with the question.
-Value (V): The actual content or information that each student knows, which might be useful to answer the question.
-
-
+### Analogy
+- **Query (Q)**: The question asked by the teacher. It seeks specific information or attention from the students.
+- **Key (K)**: The information that each student provides in response to the question. It represents how much a student's response aligns with the question.
+- **Value (V)**: The actual content or information that each student knows, which might be useful to answer the question.
