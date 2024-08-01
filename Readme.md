@@ -1,6 +1,6 @@
 # 🌟 My Learning Journey with Transformers 🌟
 
-Welcome to my coding journey! Starting today, I am building a transformer from scratch. This repository codes and documents from my learning process, with each step detailed in its own README file.
+Welcome to my coding journey! Starting today, I am building a transformer from scratch. This repository contains  codes and documents from my learning process, with each step detailed in its own README file.
 
 ## 🚀 Journey Overview
 
