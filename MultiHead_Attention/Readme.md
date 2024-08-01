@@ -1,4 +1,4 @@
-Sure, let's go through a step-by-step example of how a sentence is processed in a transformer model using multi-head attention. We'll include tokenization, embedding, positional encoding, and the application of multi-head attention, along with an example output.
+
 
 ### Example Sentence Processing with Multi-Head Attention
 
@@ -82,7 +82,3 @@ These vectors represent the final encoded state of each token in the sentence af
 
 ### Conclusion
 The multi-head attention mechanism allows the model to focus on different aspects of the input sentence simultaneously, such as syntax, semantics, and context. This leads to a richer and more nuanced understanding of the data, which is crucial for tasks like translation, summarization, and more.
-
----
-
-This example provides a concrete walkthrough of how a sentence is processed using multi-head attention in a transformer model, illustrating the process from tokenization to final output representation.
