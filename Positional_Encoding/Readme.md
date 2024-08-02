@@ -9,10 +9,14 @@ The formula uses sine and cosine functions to generate these patterns because th
 Let's break down the formula for positional encoding into two parts: one for even dimensions and one for odd dimensions of the embedding vector.
 
 1. **Even Dimensions (2i)**:
-   $$ PE(pos, 2i) = \sin\left(\frac{pos}{10000^{\frac{2i}{d_{\text{model}}}}}\right) $$
+```math
+   \text PE(pos, 2i) = \sin\left(\frac{pos}{10000^{\frac{2i}{d_{\text{model}}}}}\right) 
+```
 
 2. **Odd Dimensions (2i + 1)**:
-   $$ PE(pos, 2i+1) = \cos\left(\frac{pos}{10000^{\frac{2i}{d_{\text{model}}}}}\right) $$
+   ```math
+    PE(pos, 2i+1) = \cos\left(\frac{pos}{10000^{\frac{2i}{d_{\text{model}}}}}\right) 
+    ```
 
 ### Explanation of the Components
 
