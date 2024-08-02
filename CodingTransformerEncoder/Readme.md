@@ -1,3 +1,4 @@
+
 # Encoder Architecture
 
 The encoder architecture is composed of multiple layers that include multi-head attention mechanisms, layer normalization, and position-wise feed-forward networks. This explanation covers the main components and their mathematical operations.
@@ -7,9 +8,9 @@ The encoder architecture is composed of multiple layers that include multi-head 
 ### 1. Scaled Dot-Product Attention
 
 The scaled dot-product attention is computed as follows:
-$$
+```math
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-$$
+```
 where \( Q \), \( K \), and \( V \) are the queries, keys, and values respectively, and \( d_k \) is the dimension of the keys.
 
 ### 2. Multi-Head Attention
@@ -17,49 +18,49 @@ where \( Q \), \( K \), and \( V \) are the queries, keys, and values respective
 The multi-head attention mechanism allows the model to jointly attend to information from different representation subspaces. The process is as follows:
 
 1. Linear projections of \( Q \), \( K \), and \( V \):
-$$
+```math
 Q, K, V = W_QX, W_KX, W_VX
-$$
+```
 2. Apply scaled dot-product attention to each projected version of \( Q \), \( K \), and \( V \):
-$$
+```math
 \text{head}_i = \text{Attention}(Q_i, K_i, V_i)
-$$
+```
 3. Concatenate the heads and apply a final linear layer:
-$$
+```math
 \text{MultiHead}(Q, K, V) = W_O(\text{head}_1 \| \text{head}_2 \| \dots \| \text{head}_h)
-$$
+```
 
 ### 3. Layer Normalization
 
 Layer normalization is applied to stabilize and accelerate the training. The normalized output is given by:
-$$
+```math
 \text{LN}(x) = \gamma \left(\frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}}\right) + \beta
-$$
+```
 where \( \mu \) and \( \sigma^2 \) are the mean and variance of the input \( x \), and \( \gamma \) and \( \beta \) are learnable parameters.
 
 ### 4. Position-Wise Feed-Forward Network
 
 The position-wise feed-forward network consists of two linear transformations with a ReLU activation in between:
-$$
+```math
 \text{FFN}(x) = \text{max}(0, xW_1 + b_1)W_2 + b_2
-$$
+```
 
 ### 5. Encoder Layer
 
 Each encoder layer contains multi-head attention and feed-forward networks, each followed by layer normalization and residual connections:
-$$
+```math
 \text{EncoderLayer}(x) = \text{LN}(x + \text{MultiHead}(x, x, x))
-$$
-$$
+```
+```math
 \text{EncoderLayer}(x) = \text{LN}(x + \text{FFN}(x))
-$$
+```
 
 ### 6. Complete Encoder
 
 The complete encoder is a stack of \( N \) encoder layers:
-$$
+```math
 \text{Encoder}(x) = \text{EncoderLayer}_N(\dots \text{EncoderLayer}_2(\text{EncoderLayer}_1(x)) \dots)
-$$
+```
 
 ## Code Explanation
 
@@ -86,3 +87,5 @@ class Encoder(nn.Module):
     def forward(self, x, mask=None):
         x = self.layers(x)
         return x
+```
+
