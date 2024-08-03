@@ -9,5 +9,4 @@ Welcome to my coding journey! Starting today, I am building a transformer from s
 3. **Positional_Encoding** - Understanding and implementing the  concept of Positional Encoding in transformers. [Read more](Positional_Encoding/Readme.md)
 4. **Encoder layer** - Understanding and Implementing  the Encoder layer. [Read more](CodingTransformerEncoder/Readme.md)
 5. **Decoder layer** - Understanding and Implementing  the Decoder layer. [Read more](CodingTransformerDecoder/Readme.md)
-
-
+6. **Sentence Tokenization** -So, while studying, I implemented the same language translator dataset used by the instructor. But after completing this, I will implement it in other languages. Explanation :[Read more](SentenceTokenization/Readme.md)
