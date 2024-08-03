@@ -8,5 +8,6 @@ Welcome to my coding journey! Starting today, I am building a transformer from s
 2. **MultiHead-Attention** - Understanding and implementing the concept of Multihead Attention in transformers. [Read more](MultiHead_Attention/Readme.md)
 3. **Positional_Encoding** - Understanding and implementing the  concept of Positional Encoding in transformers. [Read more](Positional_Encoding/Readme.md)
 4. **Encoder layer** - Understanding and Implementing  the Encoder layer. [Read more](CodingTransformerEncoder/Readme.md)
+5. **Decoder layer** - Understanding and Implementing  the Decoder layer. [Read more](CodingTransformerDecoder/Readme.md)
 
 
