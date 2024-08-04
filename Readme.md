@@ -10,7 +10,7 @@ Welcome to my coding journey! Starting today, I am building a transformer from s
 4. **Encoder layer** - Understanding and Implementing  the Encoder layer. [Read more](CodingTransformerEncoder/Readme.md)
 5. **Decoder layer** - Understanding and Implementing  the Decoder layer. [Read more](CodingTransformerDecoder/Readme.md)
 6. **Sentence Tokenization** -So, while studying, I implemented the same language translator dataset used by the instructor. But after completing this, I will implement it in other languages. Explanation :[Read more](SentenceTokenization/Readme.md)
-6. **Transformer Implemented** I did impelemnted the architecture:[Read more](BuildingaTransformer)
+6. **Transformer Implemented** I did implemented the architecture and Trained a translator model:[Read more](BuildingaTransformer)
 
 ✅ Completed!
 
